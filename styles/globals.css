@@ -1,0 +1,264 @@
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/Lato-Bold.eot');
+  src: url('../fonts/Lato-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Lato-Bold.woff2') format('woff2'),
+      url('../fonts/Lato-Bold.woff') format('woff'),
+      url('../fonts/Lato-Bold.ttf') format('truetype'),
+      url('../fonts/Lato-Bold.svg#Lato-Bold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/Lato-Regular.eot');
+  src: url('../fonts/Lato-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Lato-Regular.woff2') format('woff2'),
+      url('../fonts/Lato-Regular.woff') format('woff'),
+      url('../fonts/Lato-Regular.ttf') format('truetype'),
+      url('../fonts/Lato-Regular.svg#Lato-Regular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato Hairline';
+  src: url('../fonts/Lato-Hairline.eot');
+  src: url('../fonts/Lato-Hairline.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Lato-Hairline.woff2') format('woff2'),
+      url('../fonts/Lato-Hairline.woff') format('woff'),
+      url('../fonts/Lato-Hairline.ttf') format('truetype'),
+      url('../fonts/Lato-Hairline.svg#Lato-Hairline') format('svg');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/Lato-Black.eot');
+  src: url('../fonts/Lato-Black.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Lato-Black.woff2') format('woff2'),
+      url('../fonts/Lato-Black.woff') format('woff'),
+      url('../fonts/Lato-Black.ttf') format('truetype'),
+      url('../fonts/Lato-Black.svg#Lato-Black') format('svg');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Lato';
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+.header .navbar .brand-name {
+  flex: 0 0 100%;
+  text-align: center;
+}
+.brand-name a{
+  text-decoration: none;
+  color: #000;
+}
+.header .navbar .navbar-nav {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 15px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.header .searchbar{
+  position: relative;
+}
+.header .searchbar .search-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: 0;
+}
+.header .searchbar .search-btn .img {
+  max-width: 20px;
+}
+
+.product-cards .card{height: 100%;}
+.product-cards .card .card-footer{
+  background: transparent;
+  border: 0;
+  padding-top: 0;
+  padding-bottom: 1rem;
+}
+.product-image{
+  width: 100%;
+  height: 250px;
+  position: relative;
+}
+.product-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 0.375rem;
+  border-top-right-radius: 0.375rem;
+}
+
+.product-img-slider {
+  position: relative;
+  background: #eee;
+}
+
+.product-img-slider img {
+  height: 300px;
+}
+
+.product-img-slider .slick-arrow {
+  z-index: 99;
+}
+.product-img-slider .slick-prev {
+  left: 10px;
+}
+
+.product-img-slider .slick-next {
+  right: 10px;
+}
+
+.product-img-slider .slick-dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 15px;
+}
+.product-img-slider .slick-dots li {
+  margin: 0 3px;
+  width: auto;
+  height: auto;
+}
+.product-img-slider .slick-dots li button {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  background: #fff;
+  opacity: 0.4;
+  border-radius: 1%;
+  transition: 0.25s all;
+}
+.product-img-slider .slick-dots li button:before{
+  content: none;
+}
+.product-img-slider .slick-dots li.slick-active button {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+}
+
+.single-related-product a{
+  color: #000;
+}
+
+.related-product-container .slick-slider{
+  padding: 0;
+  overflow: hidden;
+}
+
+.related-product-container .slick-slider .slick-prev {
+  left: 15px;
+}
+
+.related-product-container .slick-slider .slick-next {
+  right: 15px;
+}
+
+.related-product-container .slick-slider .slick-arrow {
+  z-index: 99;
+}
+.related-product-container .slick-slider .slick-arrow:before {
+  color: #000;
+  font-size: 24px;
+}
+
+.related-product-container .slick-dots {
+  position: relative;
+  bottom: 0;
+}
+@keyframes loading-skeleton {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.loading-skeleton {
+  pointer-events: none;
+  animation: loading-skeleton 1s infinite alternate;
+}
+
+.loading-skeleton img {
+  filter: grayscale(100) contrast(0%) brightness(1.8) !important;
+}
+.loading-skeleton h1,
+.loading-skeleton h2,
+.loading-skeleton h3,
+.loading-skeleton h4,
+.loading-skeleton h5,
+.loading-skeleton h6,
+.loading-skeleton p,
+.loading-skeleton label,
+.loading-skeleton li,
+.loading-skeleton small,
+.loading-skeleton td,
+.loading-skeleton strong,
+.loading-skeleton .btn{
+  color: transparent !important;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #eee !important;
+  border-color: #eee;
+}
+
+@media(min-width: 767px) {
+  .header .navbar {
+    flex-wrap: nowrap;
+  }
+  .header .navbar .brand-name {
+    flex: auto;
+    text-align: left;
+  }
+  .header .navbar .navbar-collapse {
+    display: flex!important;
+    flex-basis: auto;
+    padding-left: 15px;
+  }
+  
+  .header .navbar .navbar-nav {
+    flex-direction: row;
+  }
+  .product-img-slider .product-image-large img {
+    max-height: 700px;
+    height: auto;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}
